@@ -5,10 +5,64 @@
   <title>Web Sprint 2 Challenge</title>
   <script id="challenge">
     // 👉 CHALLENGE 1
+let reqOne = {
+  active: true,
+  reason: "logging off"
+}
+let reqTwo = {
+  active: false,
+  reason: "logging in"
+}
+let reqThree = {
+  active: true,
+  reason: undefined
+}
+
     function profileActivation(profile, reason) {
-
+          if (profile.active === false && reason === reason) {
+            let actProf = {
+              active: true,
+            }
+            let profile = actProf;
+            return profile
+            console.log(profile)
+          } else if (profile.active === true && reason === undefined) {
+            return `confirm status manually`
+          } else if (profile.active === true && reason === reason) {
+            let disactProf = {
+              active: false,
+              reason: reason
+            }
+            let profile = disactProf;
+            return profile;
+            console.log(profile)
+          }
+    //         let trueProf = {
+    //           active: false,
+    //           reason: reason,
+    //         }
+    //         let profile = trueProf;
+    //         return profile
+    //         console.log(profile);
+    //       } else if (profile.active === false && reason === reason) {
+    //         let falseProf = {
+    //           active: true,
+    //           reason: undefined
+    //         }
+    //         let profile = falseProf;
+    //         return profile
+    //         console.log(profile)
+    //       } else if (profile.active === true && profile.reason === undefined) {
+    //         let missingMess = {
+    //           active: true,
+    //           reason: undefined
+    //         }
+    //         let profile = missingMess
+    //         return profile
+    //         console.log("confirm status manually")
+    //       }
     }
-
+    
     // 👉 CHALLENGE 2
     function mineSweeper(grid, x, y) {
 
