@@ -67,14 +67,36 @@ let reqThree = {
 
 
     // 👉 CHALLENGE 3
-    function booleanize(obj) {
-      if (obj.property[i] === 0) {
-        let upObj = {
-          
-        }
-      }
+    let testObject = {
+        age: null,
+        key1: 0,
+        key2: 1
 
     }
+    
+    function booleanize(obj) {
+      for (let key in obj) {
+        if (obj[key] === 0) {
+          obj[key] = false;
+        }
+
+        if (obj[key] === 1){
+          obj[key] = true;
+        }
+
+        if (obj[key] === null){
+          delete obj[key];
+        }
+
+        if (key.length > 9){
+          return `shorten all prop names to 9 chars or less`
+        }
+      }
+      return obj;
+
+    }
+
+    // console.log(booleanize(testObject));
 
     // 👉 CHALLENGE 4
     function scrub(text, forbidden) {
