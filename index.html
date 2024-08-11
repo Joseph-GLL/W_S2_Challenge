@@ -100,9 +100,33 @@ let reqThree = {
 
     // 👉 CHALLENGE 4
     function scrub(text, forbidden) {
+      let censorWords = text.split(' ');
+      let updateText = [];
 
+      for (let i = 0; i < censorWords.length; i++) {
+        if (forbidden.indexOf(censorWords[i]) !== -1) {
+          let censor = '';
+            for (let g = 0; g < censorWords[i].length; g++){
+              censor += 'x';
+            }
+            updateText.push(censor);
+        //   censorWords[i] = "x"
+        // }
+        // return censorWords.join("")
+      
+      //   if (text === "" || text === undefined) {
+      //   return text;
+        
+      // } else if (forbidden === "" || forbidden === undefined){
+      //   return forbidden
+      // }
+    } else {
+      updateText.push(censorWords[i]);
     }
-
+    }
+    let result = updateText.join(' ');
+    return result;
+  }
     // 👉 CHALLENGE 5 (bonus, NOT graded)
     function normalizePhoneNumber(num) {
 
